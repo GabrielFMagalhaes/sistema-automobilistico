@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: boleto-api
+
+datasource:
+    url: jdbc:h2:file:~/boletodb
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+
+  
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}     
+  instance:
+    preferIpAddress: true

@@ -1,0 +1,44 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-ApiGatewayApplication<api-gateway>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.sistema.automobilistico.apigateway.ApiGatewayApplication",
+      "projectName": "api-gateway",
+      "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-AutomovelApiApplication<automovel-api>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.sistema.automobilistico.automovel.AutomovelApiApplication",
+      "projectName": "automovel-api",
+      "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-EurekaServerApplication<eureka-server>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.sistema.automobilistico.EurekaServerApplication",
+      "projectName": "eureka-server",
+      "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-BoletoApiApplication<boleto-api>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.sistema.automobilistico.boleto.BoletoApiApplication",
+      "projectName": "boleto-api",
+      "args": ""
+    }
+  ]
+}
