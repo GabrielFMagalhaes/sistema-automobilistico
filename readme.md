@@ -20,7 +20,7 @@ Disponibilizar uma API para cadastro e compra de automóveis, utilizando conceit
 | Boleto     | http://localhost:5555/boleto-api/swagger-ui.html#/ | http://142.93.4.1:5555/boleto-api/swagger-ui.html |
 
 - **`Postman`**: [Servidor Online](servidor_online.json)
-- **`Postman`**: [Localhost](localhost_postman.json)
+- **`Postman`**: [Localhost ](localhost_postman.json)
 
 
 ### Funcionalidades da aplicação
