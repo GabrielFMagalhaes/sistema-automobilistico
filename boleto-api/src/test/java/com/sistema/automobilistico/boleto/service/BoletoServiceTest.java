@@ -18,7 +18,7 @@ public class BoletoServiceTest {
 	private BoletoRepository boletoRepository;
 
 	@Test
-	void saveAutomovel() {
+	void saveBoleto() {
 		BoletoService boletoService = new BoletoService(boletoRepository);
 		Boleto boleto = new Boleto("Volkswagen", "Golf", 50000.00, new Date());
 

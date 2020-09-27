@@ -19,7 +19,7 @@ public class AutomovelServiceTest {
 	private AutomovelRepository automovelRepository;
 
 	@Test
-	void getAllToDos() {
+	void getAllAutomoveis() {
 		Automovel automovel = new Automovel("Chevrolet", "Camaro", 90000.00, new Date());
 		automovelRepository.save(automovel);
 		AutomovelService toDoService = new AutomovelService(automovelRepository);

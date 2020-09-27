@@ -10,20 +10,14 @@ import java.util.List;
 @Service
 public class BoletoService {
 
-    private BoletoRepository boletoRepository;
+	private BoletoRepository boletoRepository;
 
-    public BoletoService(BoletoRepository boletoRepository) {
-        this.boletoRepository = boletoRepository;
-    }
+	public BoletoService(BoletoRepository boletoRepository) {
+		this.boletoRepository = boletoRepository;
+	}
 
-    public List<Boleto> findAll() {
-        return boletoRepository.findAll();
-    }
+	public Boleto save(Boleto automovel) {
+		return boletoRepository.save(automovel);
+	}
 
-    public Boleto save (Boleto automovel) {
-        return boletoRepository.save(automovel);
-    }
-    
-    
-    
 }
