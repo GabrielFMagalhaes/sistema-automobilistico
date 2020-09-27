@@ -41,6 +41,6 @@ public class AutomovelServiceTest {
 
 		automovelService.save(automovel);
 
-		assertEquals(2.0, automovelRepository.count());
+		assertEquals(4.0, automovelRepository.count());
 	}
 }
