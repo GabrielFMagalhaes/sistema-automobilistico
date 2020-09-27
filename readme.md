@@ -4,8 +4,8 @@ Disponibilizar uma API para cadastro e compra de automóveis, utilizando conceit
 
 ### Diagrama de classes
 
-- **`Microsserviço Automóvel`**: [Diagrama de Classe Automóvel](modelagem/diagrama_classes_automovel.png)
-- **`Microsserviço Boleto`**: [Diagrama de Classe Boleto](modelagem/diagrama_classes_boleto.png)
+- **`Microsserviço Automóvel`**: [Diagrama de Classes Automóvel](modelagem/diagrama_classes_automovel.png)
+- **`Microsserviço Boleto`**: [Diagrama de Classes Boleto](modelagem/diagrama_classes_boleto.png)
 
 
 ### Arquitetura
