@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class BoletoResponseDto {
 	@NotNull
-	private Long id;
+	private Long codigoBoleto;
 
 	@NotNull
 	private double valor;
@@ -24,6 +24,6 @@ public class BoletoResponseDto {
 	private Date dataVencimento;
 
 	public static BoletoResponseDto transformaEmDto(Boleto boleto) {
-		return new BoletoResponseDto(boleto.getId(), boleto.getValor(), boleto.getDataVencimento());
+		return new BoletoResponseDto(boleto.getCodigoBoleto(), boleto.getValor(), boleto.getDataVencimento());
 	}
 }

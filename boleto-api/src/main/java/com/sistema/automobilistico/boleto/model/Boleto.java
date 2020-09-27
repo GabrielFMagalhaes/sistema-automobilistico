@@ -22,8 +22,9 @@ public class Boleto {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "codigo_boleto")
 	@NotNull
-	public Long id;
+	public Long codigoBoleto;
 
 	@NotNull
 	public String marca;
@@ -38,8 +39,8 @@ public class Boleto {
 	@NotNull
 	public Date dataVencimento;
 
-	public Boleto(Long id, String marca, String modelo, double valor, Date dataVencimento) {
-		this.id = id;
+	public Boleto(Long codigoBoleto, String marca, String modelo, double valor, Date dataVencimento) {
+		this.codigoBoleto = codigoBoleto;
 		this.marca = marca;
 		this.modelo = modelo;
 		this.valor = valor;

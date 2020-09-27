@@ -5,8 +5,6 @@ import com.sistema.automobilistico.boleto.repository.BoletoRepository;
 
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class BoletoService {
 
