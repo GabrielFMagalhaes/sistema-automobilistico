@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "d16843cd-0ceb-4904-a379-dfe082f98328",
+		"name": "Localhost",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Automovel",
+			"item": [
+				{
+					"name": "Mostrar automoveis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5555/automovel-api/automoveis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"automovel-api",
+								"automoveis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar automovel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"marca\": \"Volkswagen\",\r\n    \"modelo\": \"Golf\",\r\n    \"valor\": 50000.00,\r\n    \"dataCriado\": \"28-09-2020\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5555/automovel-api/cadastroAutomoveis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"automovel-api",
+								"cadastroAutomoveis"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Boleto",
+			"item": [
+				{
+					"name": "Gerar novo boleto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"marca\": \"Volkswagen\",\r\n    \"modelo\": \"Golf\",\r\n    \"valor\": 50000.00,\r\n    \"dataVencimento\": \"26-09-2020\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5555/boleto-api/boleto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"boleto-api",
+								"boleto"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

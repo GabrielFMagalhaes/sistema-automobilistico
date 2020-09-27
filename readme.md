@@ -12,12 +12,17 @@ Disponibilizar uma API para cadastro e compra de automóveis, utilizando conceit
 
 - **`Arquitetura`**: [Desenho da Arquitetura](modelagem/arquitetura_sistema_automobilistico.png)
 
+### URLs e Swagger
+
+| Microsserviço | Swagger Localhost | Swagger - Servidor Online |
+| ------------- | ------------- | ------------- |
+| Automóvel     | http://localhost:5555/automovel-api/swagger-ui.html#/ | http://142.93.4.1:5555/automovel-api/swagger-ui.html |
+| Boleto     | http://localhost:5555/boleto-api/swagger-ui.html#/ | http://142.93.4.1:5555/boleto-api/swagger-ui.html |
 
 ### Funcionalidades da aplicação
 > Não se esqueça de instalar o Lombok
 
 #### Microsserviço Automóvel
-- **`Swagger`**: http://localhost:5555/automovel-api/swagger-ui.html#/
 
 **`Listar os automóveis`**: Deve ser capaz de retornar uma lista de todos os automóveis registrados na aplicação Também deve retornar o status 200 se em caso de sucesso, ou 500 para erros.
 
@@ -57,7 +62,6 @@ Status: 201 Created
 ```
 
 #### Microsserviço Boleto
-- **`Swagger`**: http://localhost:5555/boleto-api/swagger-ui.html#/
 
 **`Gerar um novo boleto`**: Deve ser capaz de adicionar um novo boleto. Também deve retornar o status 201 em caso de sucesso, ou 500 para erros.
 
