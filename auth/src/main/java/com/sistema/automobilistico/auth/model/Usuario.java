@@ -1,13 +1,28 @@
 package com.sistema.automobilistico.auth.model;
 
-
-import lombok.Data;
+import javax.persistence.*;
+import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
-@Data
+@Entity
 @NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
 public class Usuario {
-	private int id;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String username;
-	private String senha;
+	private String password;
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	private List<Role> roles;
+	private boolean active;
+
 }
