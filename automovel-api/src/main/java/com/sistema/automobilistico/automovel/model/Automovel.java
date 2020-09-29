@@ -11,6 +11,7 @@ import javax.persistence.Table;
 
 import com.sun.istack.NotNull;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -18,6 +19,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "automovel")
 @Data
 @NoArgsConstructor
+@Builder
 public class Automovel {
 
 	@Id

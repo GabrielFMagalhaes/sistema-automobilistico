@@ -13,10 +13,32 @@ eureka:
     service-url:
       defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
 
-
 management:
   endpoints:
     web:
       exposure:
-        include: 
-        - "routes"
+        include: "*"
+
+
+ystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 130000
+
+
+
+zuul:
+  #  sensitiveHeaders: Cookie,Set-Cookie
+  ribbon:
+    eager-load:
+      enabled: true
+  routes:
+    auth:
+      sensitiveHeaders:
+      path: /oauth/**
+      stripPrefix: false
+      serviceId: auth
+   

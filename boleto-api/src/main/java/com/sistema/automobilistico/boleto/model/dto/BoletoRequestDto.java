@@ -30,7 +30,8 @@ public class BoletoRequestDto {
 	private Date dataVencimento;
 
 	public Boleto transformaParaObjeto(BoletoRequestDto boletoRequestDto) {
-		return new Boleto(boletoRequestDto.getMarca(), boletoRequestDto.getModelo(), boletoRequestDto.getValor(),
-				boletoRequestDto.getDataVencimento());
+		return Boleto.builder().marca(boletoRequestDto.getMarca()).modelo(boletoRequestDto.getModelo())
+				.valor(boletoRequestDto.getValor()).dataVencimento(boletoRequestDto.getDataVencimento()).build();
 	}
+
 }
