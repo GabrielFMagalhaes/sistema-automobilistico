@@ -1,11 +1,11 @@
 version: '3.4'
 services:
   eureka:
-    image: eureka-server:0.0.1
+    image: eureka-server:0.0.3
     ports:
       - 8761:8761
   automovel-api:
-    image: automovel-api:0.0.1
+    image: automovel-api:0.0.3
     container_name: automovel-api
     environment:
       EUREKA_SERVER: http://eureka:8761/eureka
@@ -15,7 +15,7 @@ services:
       - eureka
       - api-gateway
   boleto-api:
-    image: boleto-api:0.0.1
+    image: boleto-api:0.0.3
     container_name: boleto-api
     environment:
       EUREKA_SERVER: http://eureka:8761/eureka
@@ -24,8 +24,18 @@ services:
     depends_on:
       - eureka
       - api-gateway
+  auth:
+    image: auth:0.0.3
+    container_name: auth
+    environment:
+      EUREKA_SERVER: http://eureka:8761/eureka
+    ports:
+      - 8079:8079
+    depends_on:
+      - eureka
+      - api-gateway
   api-gateway:
-    image: api-gateway:0.0.1
+    image: api-gateway:0.0.3
     ports:
       - 5555:5555
     environment:

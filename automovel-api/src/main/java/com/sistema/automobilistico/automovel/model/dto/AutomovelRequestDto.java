@@ -30,7 +30,11 @@ public class AutomovelRequestDto {
 	private Date dataCriado;
 
 	public Automovel transformaParaObjeto(AutomovelRequestDto automovelRequestDto) {
-		return new Automovel(automovelRequestDto.getMarca(), automovelRequestDto.getModelo(), automovelRequestDto.getValor(),
-				automovelRequestDto.getDataCriado());
+		return Automovel.builder()
+				.marca(automovelRequestDto.getMarca())
+				.modelo(automovelRequestDto.getModelo())
+				.valor(automovelRequestDto.getValor())
+				.dataCriado(automovelRequestDto.getDataCriado())
+				.build();
 	}
 }

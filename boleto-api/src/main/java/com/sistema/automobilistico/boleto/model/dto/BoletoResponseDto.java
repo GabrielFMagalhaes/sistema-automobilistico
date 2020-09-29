@@ -7,12 +7,14 @@ import javax.validation.constraints.NotNull;
 import com.sistema.automobilistico.boleto.model.Boleto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class BoletoResponseDto {
 	@NotNull
 	private Long codigoBoleto;
@@ -22,8 +24,12 @@ public class BoletoResponseDto {
 
 	@NotNull
 	private Date dataVencimento;
-
-	public static BoletoResponseDto transformaEmDto(Boleto boleto) {
-		return new BoletoResponseDto(boleto.getCodigoBoleto(), boleto.getValor(), boleto.getDataVencimento());
+	
+	public BoletoResponseDto transformaParaDto(Boleto boleto) {
+		return BoletoResponseDto.builder()
+				.codigoBoleto(boleto.getCodigoBoleto())
+				.valor(boleto.getValor())
+				.dataVencimento(boleto.getDataVencimento())
+				.build();
 	}
 }

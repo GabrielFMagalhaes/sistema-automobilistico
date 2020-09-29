@@ -12,12 +12,10 @@ datasource:
     driverClassName: org.h2.Driver
 
   
+
 eureka:
   client:
     register-with-eureka: true
-    fetch-registry: true
+    fetch-registry: false
     service-url:
       defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}     
-  instance:
-    preferIpAddress: true
-    

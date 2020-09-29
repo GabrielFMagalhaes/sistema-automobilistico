@@ -18,3 +18,27 @@ management:
     web:
       exposure:
         include: "*"
+
+
+ystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 130000
+
+
+
+zuul:
+  #  sensitiveHeaders: Cookie,Set-Cookie
+  ribbon:
+    eager-load:
+      enabled: true
+  routes:
+    auth:
+      sensitiveHeaders:
+      path: /oauth/**
+      stripPrefix: false
+      serviceId: auth
+   
