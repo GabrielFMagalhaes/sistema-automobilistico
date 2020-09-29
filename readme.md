@@ -33,7 +33,7 @@ Disponibilizar uma API para cadastro e compra de automóveis, utilizando conceit
 > Para testar todos as APIs, lembre-se de realizar a autenticação e armazenar o access_token retornado
 > Todos os microsserviços também estão habilitados para funcionar no servidor online disponibilizado para testes
 
-![](https://s1.gifyu.com/images/testea4d65b53d40d3b3fb.gif)
+![](https://s1.gifyu.com/images/testeaa.gif)
 
 
 ### Microsserviço Autenticação OAuth
