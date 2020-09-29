@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d16843cd-0ceb-4904-a379-dfe082f98328",
+		"_postman_id": "cd570248-2f17-4e72-9574-eb3a1442251b",
 		"name": "Localhost",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,6 +11,16 @@
 				{
 					"name": "Mostrar automoveis",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8743f56f-dc4e-4bc3-8a42-aa4a11caa77d",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -31,11 +41,21 @@
 				{
 					"name": "Registrar automovel",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8743f56f-dc4e-4bc3-8a42-aa4a11caa77d",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"marca\": \"Volkswagen\",\r\n    \"modelo\": \"Golf\",\r\n    \"valor\": 50000.00,\r\n    \"dataCriado\": \"28-09-2020\"\r\n}",
+							"raw": "{\r\n    \"marca\": \"Volkswagen\",\r\n    \"modelo\": \"Golf\",\r\n    \"valor\": 50000.00,\r\n    \"dataCriado\": \"26-09-2020\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -66,6 +86,16 @@
 				{
 					"name": "Gerar novo boleto",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8743f56f-dc4e-4bc3-8a42-aa4a11caa77d",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -87,6 +117,61 @@
 							"path": [
 								"boleto-api",
 								"boleto"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Autenticar",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "client",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5555/oauth/token?grant_type=password&username=admin&password=admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5555",
+							"path": [
+								"oauth",
+								"token"
+							],
+							"query": [
+								{
+									"key": "grant_type",
+									"value": "password"
+								},
+								{
+									"key": "username",
+									"value": "admin"
+								},
+								{
+									"key": "password",
+									"value": "admin"
+								}
 							]
 						}
 					},

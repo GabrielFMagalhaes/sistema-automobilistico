@@ -23,8 +23,8 @@ Disponibilizar uma API para cadastro e compra de automóveis, utilizando conceit
 
 | Postman |
 | ------------- |
-| [Servidor Online](servidor_online.json) | 
-| [Localhost ](localhost_postman.json) | 
+| [Servidor Online](docs/servidor_online.json) | 
+| [Localhost ](docs/localhost_postman.json) | 
 
 
 ### Funcionalidades da aplicação
@@ -33,7 +33,7 @@ Disponibilizar uma API para cadastro e compra de automóveis, utilizando conceit
 > Para testar todos as APIs, lembre-se de realizar a autenticação e armazenar o access_token retornado
 > Todos os microsserviços também estão habilitados para funcionar no servidor online disponibilizado para testes
 
-[](https://media.giphy.com/media/s4JYMX6k8mk1G3ZGdj/giphy.gif)
+[Postman](https://media.giphy.com/media/s4JYMX6k8mk1G3ZGdj/giphy.gif)
 
 
 ### Microsserviço Autenticação OAuth
