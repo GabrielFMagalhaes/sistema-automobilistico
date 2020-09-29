@@ -27,7 +27,7 @@ public class AutomovelService {
 	}
 
 	public List<AutomovelResponseDto> obterAutomoveis() {
-		List<Automovel> automovelList = this.findAll();
+		List<Automovel> automovelList = automovelRepository.findAll();
 		List<AutomovelResponseDto> automovelResponseDtoList = automovelList.stream()
 				.map(automovel -> new AutomovelResponseDto().transformaParaDto(automovel)).collect(Collectors.toList());
 		

@@ -21,8 +21,8 @@ public class BoletoService {
 	}
 	
 	public BoletoResponseDto gerarBoleto(BoletoRequestDto boletoRequestDto) {
-		Boleto boleto = boletoRequestDto.transformaParaObjeto(boletoRequestDto);
-		Boleto novoBoleto = this.save(boleto);
+		Boleto boleto	 = boletoRequestDto.transformaParaObjeto(boletoRequestDto);
+		Boleto novoBoleto = boletoRepository.save(boleto);
 		
 		return new BoletoResponseDto().transformaParaDto(novoBoleto);
 	}

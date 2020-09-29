@@ -11,11 +11,7 @@
 	</parent>
 	<groupId>com.sistema.automobilistico.api-gateway</groupId>
 	<artifactId>api-gateway</artifactId>
-<<<<<<< HEAD
-	<version>0.0.2</version>
-=======
 	<version>0.0.3</version>
->>>>>>> develop
 	<name>api-gateway</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -31,7 +27,7 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-=======
+
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-oauth2</artifactId>

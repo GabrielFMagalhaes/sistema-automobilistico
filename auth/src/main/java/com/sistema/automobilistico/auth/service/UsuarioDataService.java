@@ -34,9 +34,9 @@ public class UsuarioDataService implements UserDetailsService {
     @Bean
 	public CommandLineRunner setupDefaultUser() {
 		return args -> {
-			usuarioRepository.save(new Usuario(1L, "user", // username
-                    passwordEncoder.encode("user"), // password
-					Arrays.asList(new Role(1L, "USER"), new Role(2L, "ACTUATOR")), // roles
+			usuarioRepository.save(new Usuario(1L, "admin", // username
+                    passwordEncoder.encode("admin"), // password
+					Arrays.asList(new Role(1L, "USER")), // roles
 					true// Active
 			));
 		};
