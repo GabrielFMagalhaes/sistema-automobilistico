@@ -13,13 +13,7 @@ Disponibilizar uma API para cadastro e compra de automóveis, utilizando conceit
 
 - **`Arquitetura`**: [Desenho da Arquitetura](docs/arquitetura_sistema_automobilistico.png)
 
-### URLs e Swagger/Postman
-
-| Microsserviço | Swagger Localhost | Swagger - Servidor Online |
-| ------------- | ------------- | ------------- |
-| Automóvel     | http://localhost:5555/automovel-api/swagger-ui.html#/ | http://142.93.4.1:5555/automovel-api/swagger-ui.html |
-| Boleto     | http://localhost:5555/boleto-api/swagger-ui.html#/ | http://142.93.4.1:5555/boleto-api/swagger-ui.html |
-| Autenticação     | http://localhost:5555/oauth/swagger-ui.html#/ | http://142.93.4.1:5555/oauth/swagger-ui.html |
+### Postman
 
 | Postman |
 | ------------- |
