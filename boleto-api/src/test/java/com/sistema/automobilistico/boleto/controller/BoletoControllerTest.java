@@ -20,6 +20,8 @@ import org.springframework.test.web.servlet.ResultActions;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sistema.automobilistico.boleto.model.Boleto;
+import com.sistema.automobilistico.boleto.model.dto.BoletoRequestDto;
+import com.sistema.automobilistico.boleto.model.dto.BoletoResponseDto;
 import com.sistema.automobilistico.boleto.service.BoletoService;
 
 @ExtendWith(SpringExtension.class)
@@ -36,8 +38,12 @@ public class BoletoControllerTest {
     @Test
     void gerarBoletoSucesso() throws Exception {
         Date currentDate = new Date();
-        Boleto boleto = new Boleto(2L, "Chevrolet", "Camaro", 90000.00, currentDate);
-        when(boletoService.save(any(Boleto.class))).thenReturn(boleto);
+        Boleto boleto = new Boleto();
+
+
+        BoletoResponseDto boletoResponseDto = new BoletoResponseDto(1L, 90000.00, currentDate);
+        
+        when(boletoService.gerarBoleto(any(BoletoRequestDto.class))).thenReturn(boletoResponseDto);
 
         ObjectMapper objectMapper = new ObjectMapper();
 

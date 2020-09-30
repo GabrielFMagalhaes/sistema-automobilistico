@@ -25,6 +25,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sistema.automobilistico.automovel.model.Automovel;
+import com.sistema.automobilistico.automovel.model.dto.AutomovelResponseDto;
 import com.sistema.automobilistico.automovel.service.AutomovelService;
 
 @ExtendWith(SpringExtension.class)
@@ -39,10 +40,13 @@ public class AutomovelControllerTest {
 
 	@Test
 	void getAllAutomoveis() throws Exception {
-		List<Automovel> automovelList = new ArrayList<Automovel>();
-		automovelList.add(new Automovel(1L, "Volkswagen", "Golf", 50000.00, new Date()));
-		automovelList.add(new Automovel(2L, "Fiat", "Uno", 50000.00, new Date()));
-		when(automovelService.findAll()).thenReturn(automovelList);
+		List<AutomovelResponseDto> automovelList = new ArrayList<AutomovelResponseDto>();
+		
+		Automovel automovel = new Automovel(1L, "Volkswagen", "Golf", 50000.00, new Date());
+		Automovel automovel2 = new Automovel(2L, "Fiat", "Uno", 50000.00, new Date());
+		automovelList.add(new AutomovelResponseDto().transformaParaDto(automovel));
+		automovelList.add(new AutomovelResponseDto().transformaParaDto(automovel2));
+		when(automovelService.obterAutomoveis()).thenReturn(automovelList);
 
 		mockMvc.perform(MockMvcRequestBuilders.get("/automoveis").contentType(MediaType.APPLICATION_JSON))
 				.andExpect(jsonPath("$", hasSize(2))).andDo(print());

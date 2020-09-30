@@ -18,10 +18,6 @@ public class AutomovelService {
 		this.automovelRepository = automovelRepository;
 	}
 
-	public List<Automovel> findAll() {
-		return automovelRepository.findAll();
-	}
-
 	public Automovel save(Automovel automovel) {
 		return automovelRepository.save(automovel);
 	}

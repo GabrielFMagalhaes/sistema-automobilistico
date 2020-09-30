@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.sistema.automobilistico.boleto.model.Boleto;
+import com.sistema.automobilistico.boleto.model.dto.BoletoRequestDto;
 import com.sistema.automobilistico.boleto.repository.BoletoRepository;
 
 @SpringBootTest
@@ -20,9 +21,9 @@ public class BoletoServiceTest {
 	@Test
 	void saveBoleto() {
 		BoletoService boletoService = new BoletoService(boletoRepository);
-		Boleto boleto = new Boleto("Volkswagen", "Golf", 50000.00, new Date());
+		BoletoRequestDto boleto = new BoletoRequestDto("Volkswagen", "Golf", 50000.00, new Date());
 
-		boletoService.save(boleto);
+		boletoService.gerarBoleto(boleto);
 
 		assertEquals(1.0, boletoRepository.count());
 	}

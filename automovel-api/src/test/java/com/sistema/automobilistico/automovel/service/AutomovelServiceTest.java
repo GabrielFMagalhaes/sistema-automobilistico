@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.sistema.automobilistico.automovel.model.Automovel;
+import com.sistema.automobilistico.automovel.model.dto.AutomovelResponseDto;
 import com.sistema.automobilistico.automovel.repository.AutomovelRepository;
 
 @SpringBootTest
@@ -24,8 +25,8 @@ public class AutomovelServiceTest {
 		automovelRepository.save(automovel);
 		AutomovelService toDoService = new AutomovelService(automovelRepository);
 
-		List<Automovel> automovelList = toDoService.findAll();
-		Automovel lastAutomovel = automovelList.get(automovelList.size() - 1);
+		List<AutomovelResponseDto> automovelList = toDoService.obterAutomoveis();
+		AutomovelResponseDto lastAutomovel = automovelList.get(automovelList.size() - 1);
 
 		assertEquals(automovel.getMarca(), lastAutomovel.getMarca());
 		assertEquals(automovel.getModelo(), lastAutomovel.getModelo());
